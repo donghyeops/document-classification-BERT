@@ -1,4 +1,4 @@
-## document classification with BERT
+# document classification with BERT
 - 2020 Dev-Matching 자연어 처리 제출 코드 (최종 4위)
 
 ### dependency
@@ -10,10 +10,12 @@
 ### 모델 특징
 1. SentencePiece 활용
    - 비격식 한글 문장들과 영어, 특수문자 등을 효과적으로 처리하기 위함
+   - \# SentencePiece 외 knlpy를 이용한 인코딩 방법도 함께 구현
  
-2. 작은 크기의 BERT 모델 기반
+2. BERT 모델 기반
    - 긴 문장 데이터를 효과적으로 처리하기 위해 BERT 모델 채택
    - 데이터의 수가 적기 때문에 작은 크기의 모델 구축
+   - \# 블럭 별 weight sharing 기능도 함께 구현
  
 3. RNN을 활용하여 결과 예측
    - Process: 입력 문단을 일정 크기의 문장으로 나눈 뒤, 각 문장을 BERT에 입력. 그리고 문장 별 특징들을 RNN에 입력하여 결과 예측
@@ -23,7 +25,6 @@
 4. 4개 모델 앙상블
    - 입력 문단을 나누는 기준 토큰 개수를 달리한(16, 32, 64, 128) 4개 모델들 사용
    - 모델 성능의 안정성을 위해 사용
-
 
 ### 코드 실행 순서
 ```
