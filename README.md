@@ -1,5 +1,6 @@
 # document classification with BERT
 - 2020 Dev-Matching 자연어 처리 제출 코드 (최종 4위)
+- 참고 코드: [BERT-pytorch](https://github.com/codertimo/BERT-pytorch)
 
 ### dependency
 - pytorch==1.4.0  
